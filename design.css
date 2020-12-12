@@ -1,17 +1,61 @@
+/* COLORS */
+body {
+    background: #191919;
+    color: #35f3ff;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #D4AA37;
+}
+
+.block {
+    background: rgb(255 255 255 / 2%);
+}
+
+/* WHITESPACE */
+body {
+padding-top: 30px;
+}
+
+section {
+margin-bottom: 60px;
+}
+
+h1, h2, h3, h4, h5 {
+margin-bottom: 10px;
+}
+
+h2, h3, h4, h5 {
+margin-top: 25px;
+}
+
+.block {
+    margin-right: 1vw;
+    margin-bottom: 1.2vw;
+}
+
+/* TEXT */
+body {
+    font-size: 18px;
+    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    /* font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace; */
+    overflow-wrap: break-word;
+}
+
+/* ELEMENTS */
 .sudoku {
-    width: 500px;
-    padding: 10px;
-    margin-bottom:50px;
+    width: 60vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .block {
     display: inline-grid;
-    grid-template-columns: repeat(3, 50px);
-    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: repeat(3, 4.2vw);
+    grid-template-rows: repeat(3, 4.2vw);
     justify-items: center;
     align-items: center;
     width: 30%;
-    border: 1px solid #000;
-    margin-right: 6px;
-    margin-bottom: 6px;
+    border-radius: 9px;
 }
