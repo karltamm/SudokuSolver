@@ -45,7 +45,6 @@ function getInitValues(){
 
 function solveSudoku(sudoku){
     while(sudoku.e_index >= 0){ // e_index shows unsolved cell posistion in array
-        //console.log("progress: ", sudoku.e_index);
         /* Try different values for empty cell */
         for(var val = 1; val < 10; val++){
             if(valCorrect(val, sudoku)){ // If value turned out to be okay (at least at the moment)
@@ -58,9 +57,7 @@ function solveSudoku(sudoku){
         }
     }
 
-    //console.log(sudoku);
-
-    if(sudoku.e_index < 0) sudoku.e_index++; // Last index decrementation was unnecessary
+    sudoku.e_index++; // Last index decrementation was unnecessary
 }
 
 function eCellValue(sudoku, index, new_value = -1){ // Function to get and assign (initally) empty cell value
@@ -190,9 +187,8 @@ function rowNeighbours(pos_in_row){
 /* Backtrack to previously "solved" cells because one of the chosen values was incorrect */
 function backtrack(sudoku){
     sudoku.e_index = sudoku.e_index + 1; // Backtrack 1 step/cell at time
-    //console.log("\nBACK TO: ", sudoku.e_index)
 
-    for(var val = eCellValue(sudoku, sudoku.e_index); val < 10; val++){ // Try again the values
+    for(var val = eCellValue(sudoku, sudoku.e_index); val < 10; val++){ // Try again values
         if(valCorrect(val, sudoku)){
             eCellValue(sudoku, sudoku.e_index, val); // Assign new value
             sudoku.e_index--;
