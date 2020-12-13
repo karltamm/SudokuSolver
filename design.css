@@ -35,14 +35,14 @@ h2, h3, h4, h5 {
 }
 
 .block {
-    margin-right: 8px;
-    margin-bottom: 13px;
+    margin-right: 1.7%;
+    margin-bottom: 3%;
 }
 
 /* TEXT */
 body {
-    font-size: 18px;
-    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 17px;
+    font-size: calc(17px + (22 - 17) * ((100vw - 300px) / (1600 - 300)));
     /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
     /* font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace; */
     overflow-wrap: break-word;
@@ -50,8 +50,8 @@ body {
 
 /* ELEMENTS */
 .sudoku {
-    width: 600px;
-    height: 600px;
+    width: 350px;
+    height: 350px;
 }
 
 .block {
@@ -60,7 +60,7 @@ body {
     grid-template-rows: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
-    width: 29%;
-    height: 29%;
+    width: 30%;
+    height: 30%;
     border-radius: 9px;
 }
